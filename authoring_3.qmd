@@ -9,11 +9,9 @@ format:
     code-fold: true
 ---
 
-
 ## Introduction
 
-In this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020.
-Let's start by loading the packages we'll use for the analysis.
+In this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020. Let's start by loading the packages we'll use for the analysis.
 
 ```{r}
 #| label: load-pkgs
@@ -33,8 +31,7 @@ We present the results of exploratory data analysis in @sec-eda and the regressi
 
 ## Exploratory data analysis {#sec-eda}
 
-The data contains `r nrow(duke_forest)` houses.
-As part of the exploratory analysis let's visualize and summarize the relationship between areas and prices of these houses.
+The data contains `r nrow(duke_forest)` houses. As part of the exploratory analysis let's visualize and summarize the relationship between areas and prices of these houses.
 
 ### Data visualization
 
@@ -91,8 +88,6 @@ duke_forest %>%
 
 We can fit a simple linear regression model of the form shown in @eq-slr.
 
-
-
 @tbl-lm shows the regression output for this model.
 
 ```{r}
@@ -122,17 +117,16 @@ Callouts are markdown divs that have special callout attributes. To create a cal
 
 Here a callout-note:
 
-::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `tip`, `warning`, `caution`, and `important`.
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
 :::
 
 Here a callout_caution:
 
-::: {.callout-caution}
-Note that there are five types of callouts, including:
-`note`, `tip`, `warning`, `caution`, and `important`.
+::: callout-caution
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
 :::
+
 <!--# ADD CALLOUT HERE -->
 
 <!--# ADD SECTION HEADING FOR REFERENCES HERE -->

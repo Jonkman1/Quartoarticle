@@ -1,6 +1,6 @@
 ---
 title: "Housing Prices"
-author: "Mine ?etinkaya-Rundel"
+author: "Mine Cetinkaya-Rundel"
 format: docx
 ---
 
@@ -12,7 +12,8 @@ Let's start by loading the packages we'll use for the analysis.
 ```{r}
 #| label: load-pkgs
 #| code-summary: "Packages"
-#| message: false
+#| warning: false
+#| echo: true
 
 library(openintro)  # for data
 library(tidyverse)  # for data wrangling and visualization
