@@ -234,24 +234,24 @@ Note
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 26,232
 Columns: 18
-$ timestamp                                &lt;chr&gt; "4/27/2021 11:02:10", "4/27/2~
-$ how_old_are_you                          &lt;chr&gt; "25-34", "25-34", "25-34", "2~
-$ industry                                 &lt;chr&gt; "Education (Higher Education)~
-$ job_title                                &lt;chr&gt; "Research and Instruction Lib~
-$ additional_context_on_job_title          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "~
-$ annual_salary                            &lt;dbl&gt; 55000, 54600, 34000, 62000, 6~
-$ other_monetary_comp                      &lt;dbl&gt; 0, 4000, NA, 3000, 7000, NA, ~
-$ currency                                 &lt;chr&gt; "USD", "GBP", "USD", "USD", "~
-$ currency_other                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, N~
-$ additional_context_on_income             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, N~
-$ country                                  &lt;chr&gt; "United States", "United King~
-$ state                                    &lt;chr&gt; "Massachusetts", NA, "Tenness~
-$ city                                     &lt;chr&gt; "Boston", "Cambridge", "Chatt~
-$ overall_years_of_professional_experience &lt;chr&gt; "5-7 years", "8 - 10 years", ~
-$ years_of_experience_in_field             &lt;chr&gt; "5-7 years", "5-7 years", "2 ~
-$ highest_level_of_education_completed     &lt;chr&gt; "Master's degree", "College d~
-$ gender                                   &lt;chr&gt; "Woman", "Non-binary", "Woman~
-$ race                                     &lt;chr&gt; "White", "White", "White", "W~</code></pre>
+$ timestamp                                &lt;chr&gt; "4/27/2021 11:02:10", "4/27/2…
+$ how_old_are_you                          &lt;chr&gt; "25-34", "25-34", "25-34", "2…
+$ industry                                 &lt;chr&gt; "Education (Higher Education)…
+$ job_title                                &lt;chr&gt; "Research and Instruction Lib…
+$ additional_context_on_job_title          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "…
+$ annual_salary                            &lt;dbl&gt; 55000, 54600, 34000, 62000, 6…
+$ other_monetary_comp                      &lt;dbl&gt; 0, 4000, NA, 3000, 7000, NA, …
+$ currency                                 &lt;chr&gt; "USD", "GBP", "USD", "USD", "…
+$ currency_other                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, N…
+$ additional_context_on_income             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, N…
+$ country                                  &lt;chr&gt; "United States", "United King…
+$ state                                    &lt;chr&gt; "Massachusetts", NA, "Tenness…
+$ city                                     &lt;chr&gt; "Boston", "Cambridge", "Chatt…
+$ overall_years_of_professional_experience &lt;chr&gt; "5-7 years", "8 - 10 years", …
+$ years_of_experience_in_field             &lt;chr&gt; "5-7 years", "5-7 years", "2 …
+$ highest_level_of_education_completed     &lt;chr&gt; "Master's degree", "College d…
+$ gender                                   &lt;chr&gt; "Woman", "Non-binary", "Woman…
+$ race                                     &lt;chr&gt; "White", "White", "White", "W…</code></pre>
 </div>
 </div>
 <p>We have 26,232 rows and 19 columns. All variables, except the variables ‘annual_salary’ and ‘other_monetary_comp’, are text (‘strings’ in SPSS speak).</p>
@@ -273,7 +273,7 @@ $ race                                     &lt;chr&gt; "White", "White", "White"
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>survey <span class="sc">|&gt;</span> <span class="fu">count</span>(how_old_are_you)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 x 2
+<pre><code># A tibble: 7 × 2
   how_old_are_you     n
   &lt;chr&gt;           &lt;int&gt;
 1 18-24            1015
@@ -289,7 +289,7 @@ $ race                                     &lt;chr&gt; "White", "White", "White"
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>survey <span class="sc">|&gt;</span> <span class="fu">count</span>(how_old_are_you, <span class="at">sort =</span> <span class="cn">TRUE</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 x 2
+<pre><code># A tibble: 7 × 2
   how_old_are_you     n
   &lt;chr&gt;           &lt;int&gt;
 1 25-34           11748
@@ -313,7 +313,7 @@ $ race                                     &lt;chr&gt; "White", "White", "White"
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(how_old_are_you, age_category) <span class="sc">|&gt;</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 x 2
+<pre><code># A tibble: 6 × 2
   how_old_are_you age_category
   &lt;chr&gt;           &lt;fct&gt;       
 1 25-34           25-34       
@@ -350,7 +350,7 @@ $ race                                     &lt;chr&gt; "White", "White", "White"
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>survey<span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(age_category)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 x 2
+<pre><code># A tibble: 7 × 2
   age_category     n
   &lt;fct&gt;        &lt;int&gt;
 1 under 18        10
@@ -503,7 +503,7 @@ Important
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> n<span class="sc">/</span><span class="fu">sum</span>(n)<span class="sc">*</span><span class="dv">100</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>n) <span class="co"># not yet rounded</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 x 2
+<pre><code># A tibble: 6 × 2
   gender                         percent
   &lt;chr&gt;                            &lt;dbl&gt;
 1 Man                           18.1    
@@ -521,7 +521,7 @@ Important
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> <span class="fu">round</span>((n<span class="sc">/</span><span class="fu">sum</span>(n)<span class="sc">*</span><span class="dv">100</span>), <span class="at">digits =</span> <span class="dv">3</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>n) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 x 2
+<pre><code># A tibble: 6 × 2
   gender                        percent
   &lt;chr&gt;                           &lt;dbl&gt;
 1 Man                            18.1  
@@ -539,7 +539,7 @@ Important
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> (n<span class="sc">/</span><span class="fu">sum</span>(n))<span class="sc">*</span><span class="dv">100</span>,</span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">percent =</span> <span class="fu">round</span>(percent,<span class="dv">3</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 x 3
+<pre><code># A tibble: 6 × 3
   gender                            n percent
   &lt;chr&gt;                         &lt;int&gt;   &lt;dbl&gt;
 1 Man                            4743  18.1  
@@ -562,7 +562,7 @@ Important
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(annual_salary),</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">median =</span> <span class="fu">median</span>(annual_salary)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 x 2
+<pre><code># A tibble: 1 × 2
      mean median
     &lt;dbl&gt;  &lt;dbl&gt;
 1 145725.  76000</code></pre>
@@ -585,7 +585,7 @@ Important
 <span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">miss   =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(value)))</span>
 <span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>descriptive_stat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 x 8
+<pre><code># A tibble: 1 × 8
   variable_name   min       max    mean       sd median   iqr  miss
   &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;
 1 annual_salary     0 870000000 145725. 5543526.  76000 56000     0</code></pre>
@@ -609,7 +609,7 @@ Important
 <span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>descriptive_stat_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 x 8
+<pre><code># A tibble: 2 × 8
   variable_name         min       max    mean       sd median   iqr  miss
   &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;
 1 annual_salary           0 870000000 145725. 5543526.  76000 56000     0
@@ -699,15 +699,15 @@ df |&gt;
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>converted_all <span class="sc">|&gt;</span> <span class="fu">group_by</span>(gender) <span class="sc">|&gt;</span> <span class="fu">filter</span>(USD <span class="sc">&lt;</span> <span class="dv">300000</span>) <span class="sc">|&gt;</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(USD)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 x 2
+<pre><code># A tibble: 6 × 2
   gender                           mean
   &lt;chr&gt;                           &lt;dbl&gt;
-1 Man                           104770.
-2 Non-binary                     67756.
-3 Other or prefer not to answer  85253.
+1 Man                           104736.
+2 Non-binary                     67725.
+3 Other or prefer not to answer  85227.
 4 Prefer not to answer           88000 
-5 Woman                          80567.
-6 &lt;NA&gt;                           93832.</code></pre>
+5 Woman                          80542.
+6 &lt;NA&gt;                           93799.</code></pre>
 </div>
 </div>
 <p>We plot this, and now we place it in the margin.</p>
